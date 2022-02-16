@@ -4,6 +4,8 @@ let tabDecrypt = document.querySelector('#tabDecrypt');
 let actionButton = document.querySelector('#actionButton');
 let textArea = document.querySelector("#textArea");
 let resultText = document.querySelector("#resultText")
+let btnClipboard = document.querySelector(".btn")
+let resultContainer = document.querySelector("#resultContainer")
 let wordsArray = []
 
 let letters = {
@@ -86,8 +88,14 @@ let letters = {
     Ñ: "5",
 };
 
+new ClipboardJS('.btn');
+
+
 function selectTab(tab) {
   tabSelected = tab;
+
+  resultContainer.classList.remove("visibleContainer")
+  resultContainer.classList.add("hideContainer")
 
   textArea.value = ""
   resultText.innerHTML = ""
@@ -108,13 +116,19 @@ function execute() {
         actionButton.classList.remove("indigo")
     }, 200)
 
+    resultContainer.classList.remove("hideContainer")
+    resultContainer.classList.add("visibleContainer")
+
     let texto = textArea.value
 
     if (tabSelected == 'encrypt') {
         resultText.innerHTML = toEncrypt(texto)
+        btnClipboard.dataset.clipboardText = toEncrypt(texto)
+
     } else {
         resultText.innerHTML = toDecrypt(texto)
-
+        btnClipboard.dataset.clipboardText = toDecrypt(texto)
+      
     }
 }
 

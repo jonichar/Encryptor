@@ -25,10 +25,19 @@
         <button id="actionButton">Continuar</button>
     </div>
 
-    <div>
-        <div id="resultText"></div>
+    <div id="resultContainer" class="hideContainer">
+        <div>
+            <div id="resultText">Result Text</div>
+        </div>
+    
+        <button class="btn" data-clipboard-text="">
+            <svg xmlns="http://www.w3.org/2000/svg" class="clipboardIcon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+            </svg>
+        </button>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
