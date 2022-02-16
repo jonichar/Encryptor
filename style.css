@@ -1,0 +1,58 @@
+body {
+    padding: 3em 1em;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+#menuContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.menuDiv {
+    margin-right: 1em;
+    font-size: 1.2em;
+    padding: 0.5em;
+    border-bottom: 5px solid transparent;
+    cursor: pointer;
+}
+
+.menuDiv.active {
+    border-color: pink;
+    font-weight: 700;
+}
+
+#textareaContainer {
+    margin-bottom: 2em;
+}
+
+#textArea {
+    width: 100%;
+    max-width: 500px;
+    height: 200px;
+    border-radius: 0.5em;
+    border-color: #aaa;
+    font-family: sans-serif;
+    padding: 1.5em;
+    font-size: 1.1em;
+    color: rgb(71, 71, 71);
+    outline: none;
+    border: 1px solid rgb(85, 83, 83);
+}
+
+#actionButtonContainer {
+    margin-bottom: 4em;
+}
+
+#actionButton {
+    background-color: pink;
+    padding: 1em;
+    border-radius: 1em;
+    transition: all;
+}
+
+.indigo {
+    background-color: rgb(79, 70, 229) !important;
+    color: white;
+}
